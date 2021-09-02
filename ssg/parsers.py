@@ -5,11 +5,10 @@ import shutil
 
 class Parser:
 
-    def __init__(self) -> None:
-        self.extenstions:List[str] = List()
+    extensions:List[str] = []
 
-    def valid_extension(self, extenstion):
-        return extenstion in self.extenstions
+    def valid_extension(self, extension):
+        return extension in self.extensions
 
     def parse(self, path: Path, source: Path, dest: Path):
         raise NotImplementedError()
